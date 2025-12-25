@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -9,20 +10,25 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #e7f3e4;
+    background-color: #e3f2fd; /* Azul muy claro */
     color: #333;
+    padding-top: 100px; /* Para dejar espacio bajo el header fijo */
 }
 
+/* Header fijo (flotante) */
 header {
-    background-color: #1b5e20;
+    background-color: #0d47a1; /* Azul oscuro */
     color: #fff;
-    padding: 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('header-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que el header esté siempre sobre el contenido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header .logo h1 {
@@ -30,18 +36,24 @@ header .logo h1 {
     font-weight: bold;
 }
 
+/* Enlaces del header */
 header nav a {
     color: #fff;
     margin-left: 1.5rem;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
+    background-color: #1565c0; /* Azul medio */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 header nav a:hover {
-    text-decoration: underline;
+    background-color: #42a5f5; /* Azul claro */
 }
 
+/* Main */
 main {
     display: flex;
     padding: 2rem;
@@ -53,32 +65,30 @@ article {
     flex: 2;
     margin-right: 2rem;
     padding: 1rem;
-    background-color: #ffffff;
+    background-color: #e1f5fe; /* Azul muy suave */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 article h2 {
     font-size: 2.5rem;
-    color: #2e7d32;
+    color: #1565c0; /* Azul medio */
     margin-bottom: 1rem;
 }
 
+/* Aside (Artículos destacados) */
 aside {
     flex: 1;
-    background-color: #dcedc8;
+    background-color: #bbdefb; /* Azul suave */
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: url('aside-bg.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 aside h3 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
-    color: #2e7d32;
+    color: #1565c0;
 }
 
 .destacado {
@@ -96,7 +106,7 @@ aside h3 {
 }
 
 .destacado a {
-    color: #1b5e20;
+    color: #0d47a1;
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -104,17 +114,15 @@ aside h3 {
 }
 
 .destacado a:hover {
-    color: #33691e;
+    color: #42a5f5; /* Azul claro */
 }
 
+/* Footer */
 footer {
-    background-color: #2e7d32;
+    background-color: #0d47a1; /* Azul oscuro */
     padding: 2rem;
     text-align: center;
     color: #fff;
-    background-image: url('footer-bg.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 footer h3 {
@@ -150,11 +158,12 @@ footer h3 {
 }
 
 .footer-destacados a:hover {
-    color: #a5d6a7;
+    color: #82b1ff; /* Azul claro */
 }
 
 /* Responsive Design */
 
+/* Pantallas de 768px o menos */
 @media (max-width: 768px) {
     main {
         flex-direction: column;
@@ -187,6 +196,7 @@ footer h3 {
     }
 }
 
+/* Pantallas de 480px o menos */
 @media (max-width: 480px) {
     header {
         padding: 1rem;
